@@ -7,16 +7,16 @@
    Note: It doesn't matter which person gets which card. The only thing that matters is that each person should have an equal number of cards.
    
    Sample Input 1 :
-  Testcases : 4
-              3
-              50
-              2
-              14
+   Testcases (t) : 4
+                   3
+                   50
+                   2
+                   14
    Sample Output 1 :
-              1
-              2
-              0
-              10
+                   1
+                   2
+                   0
+                   10
 */
 
 
