@@ -15,6 +15,12 @@
                       gl
                       hf
                       waow
+
+	Conditions which have to be avoided for a palindrome substring :-
+		1. S[i] != S[i+1]         if the length of string is even
+		1. S[i] != S[i+2]         if the length of string is odd
+		
+	If these two conditions are avoided then the resultant string is always not a palindrome.
 */
 
 
@@ -31,15 +37,15 @@ int main()
 	    int N;
 	    cin >> N;
 	    
-	    string S = "";
-	    char curr = 'a';
+	    string S = "";                 //create a string
+	    char curr = 'a';               //take characters 'a', 'b' and 'c'
 	    
 	    for(int i = 0; i < N; i++)
 	    {
 	        S += curr;
 	        curr++;
 	       
-	        if(curr == 'd')
+	        if(curr == 'd')                 //print the pattern like : abcabcabc
 	            curr = 'a';
 	    }
 	    cout << S << endl;
