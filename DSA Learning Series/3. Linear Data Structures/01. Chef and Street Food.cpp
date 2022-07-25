@@ -31,3 +31,35 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        int N;
+        cin >> N;
+        
+        /* s = number of stores in street
+           p = number of peoples
+           v = price of one item of food */
+        int s, p, v, maxProfit = 0;            
+        
+        while(N-- > 0)
+        {
+            cin >> s >> p >> v;
+            
+            // here we do (s+1) b,coz if chef opens a store so there is a increase in number of stores in street
+            maxProfit = max(maxProfit , (p / (s + 1)) * v);
+        }
+        cout << maxProfit << endl;
+    }
+	return 0;
+}
+
+
+
