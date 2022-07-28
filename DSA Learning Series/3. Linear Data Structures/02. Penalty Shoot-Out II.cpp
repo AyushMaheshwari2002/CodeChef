@@ -36,3 +36,66 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin >> t;
+	
+	while(t--)
+	{
+	    int N;
+	    cin >> N;
+	    
+	    string s;
+	    cin >> s;
+	    
+	    int score_A = 0, score_B = 0;
+	    
+	    int remainingMoves_A = N;
+	    int remainingMoves_B = N;
+	    
+	    int winner = 2*N;               // takes it as a last index b'coz if DRAW case appears then it will return the last index
+	    
+	    for(int i = 0; i < 2 * N; i++)
+	    {
+	        // Team A's Turn
+	        if(i % 2 == 0)
+	        {
+	            if(s[i] == '1')           // A's Goal
+	            { 
+	                score_A++;
+	            }
+	            remainingMoves_A--;
+	        }
+	        else         // Team B's Turn
+	        {
+	            if(s[i] == '1')           // A's Goal
+	            { 
+	                score_B++;
+	            }
+	            remainingMoves_B--;
+	        }
+	        
+	        if(score_A > score_B + remainingMoves_B)
+	        {
+	            winner = i + 1;             // means here A will win which decide at index i+1
+	            break;
+	        }
+	        
+	        if(score_B > score_A + remainingMoves_A)
+	        {
+	            winner = i + 1;             // means here B will win which decide at index i+1
+	            break;
+	        }
+	    }
+	    
+	    cout << winner << endl;
+	}
+	return 0;
+}
+
+
+
