@@ -57,7 +57,7 @@ int main()
 	    int remainingMoves_A = N;
 	    int remainingMoves_B = N;
 	    
-	    int winner = 2*N;               // takes it as a last index b'coz if DRAW case appears then it will return the last index
+	    int length = 2*N;               // takes it as a last index b'coz if DRAW case appears then it will return the last index
 	    
 	    for(int i = 0; i < 2 * N; i++)
 	    {
@@ -81,18 +81,18 @@ int main()
 	        
 	        if(score_A > score_B + remainingMoves_B)
 	        {
-	            winner = i + 1;             // means here A will win which decide at index i+1
+	            length = i + 1;             // means here A will win which decide at index i+1
 	            break;
 	        }
 	        
 	        if(score_B > score_A + remainingMoves_A)
 	        {
-	            winner = i + 1;             // means here B will win which decide at index i+1
+	            length = i + 1;             // means here B will win which decide at index i+1
 	            break;
 	        }
 	    }
 	    
-	    cout << winner << endl;
+	    cout << length << endl;
 	}
 	return 0;
 }
