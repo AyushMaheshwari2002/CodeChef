@@ -21,4 +21,57 @@
 
 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin >> t;
+	
+	while(t--)
+	{
+	    int n;
+	    cin >> n;
+	    
+	    int array[n];
+	    for(int i = 0; i < n; i++)
+	    {
+	        cin >> array[i];
+	    }
+	    
+	    set<int> st;
+	    map<int,int> m;
+	    for(auto i : array)
+	    {
+	        st.insert(i);
+	        m[i]++;
+	    }
+	    
+	    int ans = INT_MIN;
+	    for(auto i : m)
+	    {
+	        if(i.second > ans)
+	        {
+	            ans = i.second;
+	        }
+	    } 
+	        
+	    if(n % 2 == 0 && ans <= (n/2) && m.size() >= 2)
+	    {
+	        cout << "Yes" << endl;
+	    }
+	    else if(n % 2 && ans <= ((n/2) + 1) && m.size() >= 2)
+	    {
+	        cout << "Yes" << endl;
+	    }
+	    else 
+	    {
+	        cout << "No" << endl;
+	    }
+	}
+	return 0;
+}
+
+
 
