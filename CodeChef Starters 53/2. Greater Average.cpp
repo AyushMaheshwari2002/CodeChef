@@ -29,3 +29,31 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin >> t;
+	
+	while(t--)
+	{
+	    float a, b, c;
+	    cin >> a >> b >> c;
+	    
+	    float avg = (a + b) / 2;
+	    
+	    if(avg > c)
+	    {
+	        cout << "Yes" << endl;
+	    }
+	    else {
+	        cout << "No" << endl;
+	    }
+	}
+	return 0;
+}
+
+
+
