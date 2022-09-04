@@ -29,3 +29,32 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        
+        long int even_pair = n / 2;
+        long int odd_pair = n / 2;
+        
+        if(n % 2 != 0)
+        {
+            odd_pair++;
+        }
+        
+        cout << 2 * (odd_pair * even_pair) << endl;
+    }
+	return 0;
+}
+
+
+
+
