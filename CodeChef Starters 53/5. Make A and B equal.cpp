@@ -37,4 +37,45 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        int n;                // length of array A and B 
+        cin >> n;
+        
+        long long a[n], b[n];
+        for(int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        
+        long long diff1 = 0, diff2 = 0;
+        for(int i = 0; i < n; i++)
+        {
+            cin >> b[i];
+            diff1 = diff1 + (a[i] - b[i]);
+            diff2 = diff2 + abs(a[i] - b[i]);
+        }
+        
+        if(diff1 != 0 || diff2 % 2 != 0)
+        {
+            cout << -1 << endl;
+        }
+        else {
+            cout << diff2/2 << endl;
+        }
+    }
+	return 0;
+}
+
+
+
+
 
