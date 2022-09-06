@@ -25,4 +25,25 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        int x, p, q;
+        cin >> x >> p >> q;
+        
+        int passenger = p - q;
+        
+        cout << passenger * x << endl;
+    }
+	return 0;
+}
+
+
 
