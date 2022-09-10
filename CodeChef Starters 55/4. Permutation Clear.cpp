@@ -35,3 +35,49 @@
 
 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        
+        vector<long long> v;
+        for(int i = 0; i < n; i++)
+        {
+            cin >> v[i];
+        }
+        
+        long long k;
+        set<long long> s;
+        for(int i = 0; i < k; i++)
+        {
+            int temp;
+            cin >> temp;
+            s.insert(temp);
+        }
+        
+        for(int i = 0; i < n; i++)
+        {
+            if(s.count(v[i]))
+            {
+                continue;
+            }
+            else {
+                cout << v[i] << "  ";
+            }
+        }
+        
+        cout << endl;
+    }
+	return 0;
+}
+
+
+
