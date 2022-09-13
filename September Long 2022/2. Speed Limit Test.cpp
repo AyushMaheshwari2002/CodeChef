@@ -25,3 +25,37 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        float a, x, b, y;
+        cin >> a >> x >> b >> y;
+        
+        float cmp1 = a/x;
+        float cmp2 = b/y;
+        
+        if(cmp1 > cmp2)
+        {
+            cout << "Alice" << endl;
+        }
+        else if(cmp1 < cmp2)
+        {
+            cout << "Bob" << endl;
+        }
+        else if(cmp1 == cmp2)
+        {
+            cout << "Equal" << endl;
+        }
+    }
+	return 0;
+}
+
+
+
