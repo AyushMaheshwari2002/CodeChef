@@ -29,3 +29,46 @@
 
 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        long long n;
+        cin >> n;
+        
+        long long arr[n];
+        for(int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        
+        sort(arr,arr+n);
+        
+        long long mx = max(arr[0]*arr[0], arr[n-1]*arr[n-1]);
+        long long mn = 1e18;
+        
+        if(arr[0] < 0 && arr[n-1] > 0)
+        {
+            mn = arr[0] * arr[n-1];
+        }
+        else {
+            for(int i = 0; i < n; i++)
+            {
+                mn = min(mn, arr[i]*arr[i]);
+            }
+        }
+        
+        cout << mn << "  " << mx << endl;
+    }
+        
+	return 0;
+}
+
+
+
