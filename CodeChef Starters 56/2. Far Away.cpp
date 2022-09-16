@@ -30,3 +30,39 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int t;
+	cin >> t;
+	
+	while(t--)
+	{
+	    int n, m;
+	    cin >> n >> m;
+	    long long arr[n];
+	    
+	    for(int i = 0; i < n; i++)
+	    {
+	        cin >> arr[i];
+	    }
+	    
+	    long long mn = 1, mx = m;
+	    long long ans = 0;
+	    
+	    for(int i = 0; i < n; i++)
+	    {
+	        ans += max(abs(arr[i] - 1), abs(arr[i] - mx));
+	    }
+	    
+	    cout << ans << endl;
+	    
+	}
+	return 0;
+}
+
+
+
+
