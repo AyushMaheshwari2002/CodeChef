@@ -30,4 +30,49 @@
 
 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+	int t;
+	cin >> t;
+	
+	while(t--)
+	{
+	    long long n, k, val;
+	    cin >> n >> k;
+	    
+	    vector<long long> v;
+	    long long ans = 0;
+
+	    for(int i = 0; i < n; i++)
+	    {
+	        cin >> val;
+	        ans = gcd(ans,val);
+	        v.push_back(val);
+	    }
+	    val = 0;
+	    long long count = 0;
+	    for(int i =0; i < n; i++)
+	    {
+	        val = gcd(val,v[i]);
+	        if(val == ans)
+	        {
+	            count++;
+	            val = 0;
+	        }
+	    }
+	    if(count >= k)
+	    {
+	        cout << "Yes" << endl;
+	    }
+	    else {
+	        cout << "No" << endl;
+	    }
+	}
+	return 0;
+}
+
+
 
