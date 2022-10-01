@@ -1,4 +1,4 @@
-//  Link :   https://www.codechef.com/submit/NONNEGPROD?tab=statement
+//  Link :   https://www.codechef.com/submit/NONNEGPROD
 
 
 #include <iostream>
